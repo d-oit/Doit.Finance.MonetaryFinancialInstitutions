@@ -52,8 +52,16 @@ The EU population of MFIs
    var result = await monetaryFinancialInstitution.GetCurentListAsync(false);
   ```
 
+- Download the latest minimum reserve requirement csv. This csv include the **BIC**
+ ```csharp
+   var result = await monetaryFinancialInstitution.GetCurentMrrListAsync(true);
+  ```
+- Use supplied csv files **mfi_mrr_csv_200930.csv** / **mfi_mrr_csv_update_200930.csv**
+  ```csharp
+   var result = await monetaryFinancialInstitution.GetCurentMrrListAsync(false);
+  ```
 
 ### Tooling
 
-- Generate classes from CSV
+- Generate class from CSV header
 https://toolslick.com/generation/code/class-from-csv
