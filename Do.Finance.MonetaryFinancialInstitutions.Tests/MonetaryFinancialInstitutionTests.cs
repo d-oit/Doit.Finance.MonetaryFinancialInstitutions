@@ -51,7 +51,6 @@ namespace Do.Finance.MonetaryFinancialInstitutions.Tests
             monetaryFinancialInstitution.CsvMfi_Mrr_UpdateFileName.ShouldBe(defaultCsvUpdateFileName);
         }
 
-
         [Fact]
         public async System.Threading.Tasks.Task DownloadAndGetCurrentList_StateUnderTest_ExpectedBehaviorAsync()
         {
@@ -95,7 +94,5 @@ namespace Do.Finance.MonetaryFinancialInstitutions.Tests
             var result = monetaryFinancialInstitution.GetMfiList();
             result.Count().ShouldBe(6197);
         }
-
-        
     }
 }
