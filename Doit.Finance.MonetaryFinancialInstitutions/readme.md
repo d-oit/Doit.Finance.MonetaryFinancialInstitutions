@@ -51,3 +51,8 @@ The EU population of MFIs
   ```csharp
    var result = await monetaryFinancialInstitution.GetCurentListAsync(false);
   ```
+
+### Used Tools
+
+Generate classes from CSV
+https://toolslick.com/generation/code/class-from-csv
