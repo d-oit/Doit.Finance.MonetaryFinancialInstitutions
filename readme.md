@@ -1,7 +1,8 @@
 ﻿# Do.Finance.MonetaryFinancialInstitution
 [![NuGet version](https://badge.fury.io/nu/Doit.Finance.MonetaryFinancialInstitutions.svg)](https://badge.fury.io/nu/Doit.Finance.MonetaryFinancialInstitutions)
 
-Get the latest Monetary Financial Institutions (MFIs) from the https://www.ecb.europa.eu Website as IEnumerable 
+- Get the latest Monetary Financial Institutions (MFIs) from https://www.ecb.europa.eu 
+- Additional support of national bank sort code
 
 **ECB User guide**
 https://www.ecb.europa.eu/stats/financial_corporations/list_of_financial_institutions/html/mfi_userguide.en.html
@@ -85,5 +86,5 @@ https://joshclose.github.io/CsvHelper/
 https://github.com/ClosedXML/ClosedXML
 
 #### TODOs
-- [ ] Find a better name for GermanBankSortCodeHelper
+- [x] Find a better name for GermanBankSortCodeHelper
 - [ ] Merge the files to one BankAccount list
