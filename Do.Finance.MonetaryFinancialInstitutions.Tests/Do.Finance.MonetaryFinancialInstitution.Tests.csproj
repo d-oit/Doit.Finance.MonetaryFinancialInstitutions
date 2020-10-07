@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Doit.Finance.MonetaryFinancialInstitutions\Doit.Finance.MonetaryFinancialInstitutions.csproj" />
+    <ProjectReference Include="..\Doit.Finance.MonetaryFinancialInstitutions\Doit.Finance.MonetaryFinancialInstitution.csproj" />
   </ItemGroup>
 
 </Project>
