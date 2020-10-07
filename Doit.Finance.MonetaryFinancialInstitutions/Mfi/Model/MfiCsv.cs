@@ -2,9 +2,9 @@
 {
     public class MfiCsv
     {
-        public string RIAD_CODE { get; set; } // The ID code is a unique identifier for each MFI (IBAN)
+        public string RIAD_CODE { get; set; } 
         public string LEI { get; set; }
-        public string COUNTRY_OF_REGISTRATION { get; set; } // The country of residence of the MFI
+        public string COUNTRY_OF_REGISTRATION { get; set; }
         public string NAME { get; set; }
         public string BOX { get; set; }
         public string ADDRESS { get; set; }

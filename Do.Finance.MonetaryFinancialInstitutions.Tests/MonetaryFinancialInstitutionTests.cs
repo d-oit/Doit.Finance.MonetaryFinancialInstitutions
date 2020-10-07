@@ -94,5 +94,6 @@ namespace Do.Finance.MonetaryFinancialInstitutions.Tests
             var result = monetaryFinancialInstitution.GetMfiList();
             result.Count().ShouldBe(6197);
         }
+
     }
 }

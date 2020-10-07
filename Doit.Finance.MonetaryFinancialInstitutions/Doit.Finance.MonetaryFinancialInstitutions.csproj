@@ -3,15 +3,22 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Description>Get the latest Monetary Financial Institutions (MFIs) from the https://www.ecb.europa.eu Website as IEnumerable</Description>
+    <Description>Get the latest european Monetary Financial Institutions (MFIs)</Description>
+    <RepositoryUrl>https://github.com/do-it-ger/Doit.Finance.MonetaryFinancialInstitutions</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/do-it-ger/Doit.Finance.MonetaryFinancialInstitutions</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.95.3" />
     <PackageReference Include="CsvHelper" Version="15.0.6" />
     <PackageReference Include="HtmlAgilityPack" Version="1.11.24" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.7.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="blz-neu-xls-data.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="mfi_csv_201001.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

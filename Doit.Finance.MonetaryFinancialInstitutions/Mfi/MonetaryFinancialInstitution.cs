@@ -1,4 +1,5 @@
 ﻿using CsvHelper;
+using Doit.Finance.MonetaryFinancialInstitutions.Extensions;
 using HtmlAgilityPack;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,7 @@ namespace Doit.Finance.MonetaryFinancialInstitutions
 
         public CsvType CsvType { get; private set; }
 
+      
         /// <summary>Gets the curent Monetary Financial Institutions list asynchronous.
         /// Without BIC</summary>
         /// <param name="downloadCsv">if set to <c>true</c> [download CSV].</param>
@@ -259,7 +261,10 @@ namespace Doit.Finance.MonetaryFinancialInstitutions
             foreach (var item in nodes)
             {
                 string hrefValue = item.GetAttributeValue("href", string.Empty);
-                fileNames.Add(await DownloadFileAsync(ecbDomain + hrefValue));
+                var url = ecbDomain + hrefValue;
+                var lastIndex = url.LastIndexOf("/");
+                var fileInfo = new FileInfo($"{url.Substring(lastIndex + 1)}");
+                fileNames.Add(await DownloadExtension.DownloadFileAsync(url, fileInfo));
             }
 
             if (fileNames.Count > 2)
@@ -267,33 +272,6 @@ namespace Doit.Finance.MonetaryFinancialInstitutions
                 throw new Exception("Website has changed. Check for Full Database and Update table row description!");
             }
             return fileNames;
-        }
-
-        /// <summary>Downloads the file asynchronous.</summary>
-        /// <param name="url">The URL.</param>
-        /// <returns>
-        ///   <br />
-        /// </returns>
-        private static async Task<string> DownloadFileAsync(string url)
-        {
-            var lastIndex = url.LastIndexOf("/");
-            var fileInfo = new FileInfo($"{url.Substring(lastIndex + 1)}");
-            using (var client = new HttpClient())
-            {
-                using (var response = await client.GetAsync(url))
-                {
-                    if (response.IsSuccessStatusCode)
-                    {
-                        await using var ms = await response.Content.ReadAsStreamAsync();
-                        await using var fs = File.Create(fileInfo.FullName);
-                        ms.Seek(0, SeekOrigin.Begin);
-                        ms.CopyTo(fs);
-
-                        return fileInfo.FullName;
-                    }
-                }
-            }
-            return null;
         }
     }
 

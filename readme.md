@@ -8,9 +8,20 @@ https://www.ecb.europa.eu/stats/financial_corporations/list_of_financial_institu
 **General download information website**
 https://www.ecb.europa.eu/stats/financial_corporations/list_of_financial_institutions/html/elegass.en.html
 
+# National Bank sort code support
+Additional support of national bank sort code
+
+Support:
+- [Deutsche Bundesbank](https://www.bundesbank.de/en/tasks/payment-systems/services/bank-sort-codes/download-bank-sort-codes-626218)
+ ```csharp
+    var germanySortCodeHelper = new GermanySortCodeHelper();
+    var result = await germanySortCodeHelper.GetCurrentBankSortList(download: true);
+  ```
+
+
 ## Requirement
 
-Check the if the csv files are avaible at the url:
+Check if the csv files are available at the url:
 
 https://www.ecb.europa.eu/stats/financial_corporations/list_of_financial_institutions/html/daily_list-MID.en.html
 
@@ -63,5 +74,12 @@ The EU population of MFIs
 
 ### Tooling
 
-- Generate class from CSV header
+- Generate class from csv header
 https://toolslick.com/generation/code/class-from-csv
+
+- CsvHelper
+https://joshclose.github.io/CsvHelper/
+
+#### TODOs
+- [ ] Find a better name for GermanBankSortCodeHelper
+- [ ] Merge the files to one BankAccount list
