@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 namespace Doit.Finance.MonetaryFinancialInstitutions
 {
     // Check https://www.bundesbank.de/en/homepage/terms-of-use
-    public class GermanySortCodeHelper : INationalBankSortCode
+    public class GermanyBankSortCodeHelper : INationalBankSortCode
     {
         private const string DownloadPageDomain = "https://www.bundesbank.de";
         private const string DownloadFileName = "blz-neu-xls-data.xlsx";
@@ -59,6 +59,7 @@ namespace Doit.Finance.MonetaryFinancialInstitutions
                     BIC = row.Field(8).Value.ToString(),
                     Postal = row.Field(4).Value.ToString(),
                     City = row.Field(5).Value.ToString(),
+                    Country = "DE"
                 }
             ).ToList();
 
