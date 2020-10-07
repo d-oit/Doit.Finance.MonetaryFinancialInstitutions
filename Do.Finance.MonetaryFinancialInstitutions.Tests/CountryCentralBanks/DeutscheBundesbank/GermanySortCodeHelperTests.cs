@@ -11,7 +11,7 @@ namespace Do.Finance.MonetaryFinancialInstitutions.Tests.CountryCentralBanks.Deu
         public async Task GetCurrentGermanBankSortList_StateUnderTest_ExpectedBehavior()
         {
             // Arrange
-            var germanySortCodeHelper = new GermanySortCodeHelper();
+            var germanySortCodeHelper = new GermanyBankSortCodeHelper();
             bool download = false;
             // Act
             var result = await germanySortCodeHelper.GetCurrentBankSortList(
@@ -24,7 +24,7 @@ namespace Do.Finance.MonetaryFinancialInstitutions.Tests.CountryCentralBanks.Deu
         public async Task DownloadFileAsync_StateUnderTest_ExpectedBehavior()
         {
             // Arrange
-            var germanySortCodeHelper = new GermanySortCodeHelper();
+            var germanySortCodeHelper = new GermanyBankSortCodeHelper();
             var result = await germanySortCodeHelper.GetCurrentBankSortList(download: true);
 
             result.ShouldNotBe(null);
