@@ -80,6 +80,12 @@ https://toolslick.com/generation/code/class-from-csv
 - CsvHelper
 https://joshclose.github.io/CsvHelper/
 
+- ClosedXML for reading excel files
+https://github.com/ClosedXML/ClosedXML
+
 #### TODOs
 - [ ] Find a better name for GermanBankSortCodeHelper
 - [ ] Merge the files to one BankAccount list
+
+# Nuget Package
+[![NuGet version](https://badge.fury.io/nu/Doit.Finance.MonetaryFinancialInstitutions.svg)](https://badge.fury.io/nu/Doit.Finance.MonetaryFinancialInstitutions)
