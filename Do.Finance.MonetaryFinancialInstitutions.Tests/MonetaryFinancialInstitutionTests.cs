@@ -5,7 +5,7 @@ using Xunit;
 
 namespace Do.Finance.MonetaryFinancialInstitutions.Tests
 {
-    public class MonetaryFinancialInstitutionTests
+    public class MonetaryFinancialInstitutionTestsnuget
     {
         [Fact]
         public void GetUpdatedList_StateUnderTest_ExpectedBehavior()

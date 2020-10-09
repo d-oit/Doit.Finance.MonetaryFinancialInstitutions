@@ -67,7 +67,7 @@ The EU population of MFIs
    var result = await monetaryFinancialInstitution.GetCurentListAsync(false);
   ```
 
-- Download the latest minimum reserve requirement csv. This csv include the **BIC**
+- Download the latest minimum reserve requirement csv. This csv includes the **BIC**
  ```csharp
    var result = await monetaryFinancialInstitution.GetCurentMrrListAsync(true);
   ```
@@ -91,3 +91,10 @@ https://github.com/ClosedXML/ClosedXML
 - [x] Find a better name for GermanBankSortCodeHelper -> Naming: Country + SortCodeHelper = GermanyBankSortCodeHelper
 - [ ] Merge the files to one BankAccount list
 - [ ] Better file handling. Current: download files in the main project folder
+- [ ] Support non european bank sort codes
+
+# Contribution
+
+Create more national bank sort core helper. Use the class **GermanyBankSortCodeHelper** as example.
+
+Helpful description for contribute: https://github.com/MarcDiethelm/contributing/blob/master/README.md
