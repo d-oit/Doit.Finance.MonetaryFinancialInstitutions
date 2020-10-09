@@ -65,6 +65,7 @@ namespace Doit.Finance.MonetaryFinancialInstitutions
 
             // remove old records
             list = list.Where(x => !x.Name.Contains("-alt-")).ToList();
+            wb.Dispose();
 
             return list;
         }

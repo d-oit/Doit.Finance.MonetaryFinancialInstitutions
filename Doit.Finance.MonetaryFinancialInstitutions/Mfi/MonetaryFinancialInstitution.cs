@@ -104,7 +104,8 @@ namespace Doit.Finance.MonetaryFinancialInstitutions
             var list = new List<MfiCsv>();
             var badRecods = new List<string>();
             bool isRecordBad = false;
-            using (var reader = new StreamReader(fileName))
+            using (var stream = File.OpenRead(fileName))
+            using (var reader = new StreamReader(stream))
             using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
             {
                 csv.Configuration.Delimiter = "\t";
@@ -138,7 +139,8 @@ namespace Doit.Finance.MonetaryFinancialInstitutions
             var list = new List<MfiMinimunReserveRequirement>();
             var badRecods = new List<string>();
             bool isRecordBad = false;
-            using (var reader = new StreamReader(fileName))
+            using (var stream = File.OpenRead(fileName))
+            using (var reader = new StreamReader(stream))
             using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
             {
                 csv.Configuration.Delimiter = "\t";
@@ -178,7 +180,8 @@ namespace Doit.Finance.MonetaryFinancialInstitutions
             var list = new List<MfiUpdateCsv>();
             var badRecods = new List<string>();
             bool isRecordBad = false;
-            using (var reader = new StreamReader(fileName))
+            using (var stream = File.OpenRead(fileName))
+            using (var reader = new StreamReader(stream))
             using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
             {
                 csv.Configuration.Delimiter = "\t";
@@ -212,7 +215,8 @@ namespace Doit.Finance.MonetaryFinancialInstitutions
             var list = new List<MfiMinimunReserveRequirementUpdate>();
             var badRecods = new List<string>();
             bool isRecordBad = false;
-            using (var reader = new StreamReader(fileName))
+            using (var stream = File.OpenRead(fileName))
+            using (var reader = new StreamReader(stream))
             using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
             {
                 csv.Configuration.Delimiter = "\t";
