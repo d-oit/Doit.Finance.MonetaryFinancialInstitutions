@@ -18,7 +18,7 @@ Additional support of national bank sort code
 Support:
 - [Deutsche Bundesbank](https://www.bundesbank.de/en/tasks/payment-systems/services/bank-sort-codes/download-bank-sort-codes-626218)
  ```csharp
-    var germanySortCodeHelper = new GermanySortCodeHelper();
+    var germanySortCodeHelper = new GermanyBankSortCodeHelper();
     var result = await germanySortCodeHelper.GetCurrentBankSortList(download: true);
   ```
 
@@ -67,7 +67,7 @@ The EU population of MFIs
    var result = await monetaryFinancialInstitution.GetCurentListAsync(false);
   ```
 
-- Download the latest minimum reserve requirement csv. This csv include the **BIC**
+- Download the latest minimum reserve requirement csv. This csv includes the **BIC**
  ```csharp
    var result = await monetaryFinancialInstitution.GetCurentMrrListAsync(true);
   ```
@@ -88,5 +88,13 @@ https://joshclose.github.io/CsvHelper/
 https://github.com/ClosedXML/ClosedXML
 
 #### TODOs
-- [x] Find a better name for GermanBankSortCodeHelper
+- [x] Find a better name for GermanBankSortCodeHelper -> Naming: Country + SortCodeHelper = GermanyBankSortCodeHelper
 - [ ] Merge the files to one BankAccount list
+- [ ] Better file handling. Current: download files in the main project folder
+- [ ] Support non european bank sort codes
+
+# Contribution
+
+Create more national bank sort core helper. Use the class **GermanyBankSortCodeHelper** as example.
+
+Helpful description for contribute: https://github.com/MarcDiethelm/contributing/blob/master/README.md
