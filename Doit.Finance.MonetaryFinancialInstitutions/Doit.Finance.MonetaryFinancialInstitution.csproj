@@ -3,14 +3,14 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <Authors>Dominik Oswald</Authors>
     <Description>Get the latest european Monetary Financial Institutions (MFIs)</Description>
     <RepositoryUrl>https://github.com/do-it-ger/Doit.Finance.MonetaryFinancialInstitutions</RepositoryUrl>
     <PackageProjectUrl>https://github.com/do-it-ger/Doit.Finance.MonetaryFinancialInstitutions</PackageProjectUrl>
-    <PackageTags>Bank sort codes, banking, .Net</PackageTags>
-    <AssemblyVersion>1.0.0.2</AssemblyVersion>
-    <FileVersion>1.0.0.2</FileVersion>
+    <PackageTags>Bank sort codes, banking, .Net, BankAccountList</PackageTags>
+    <AssemblyVersion>1.0.0.3</AssemblyVersion>
+    <FileVersion>1.0.0.3</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
