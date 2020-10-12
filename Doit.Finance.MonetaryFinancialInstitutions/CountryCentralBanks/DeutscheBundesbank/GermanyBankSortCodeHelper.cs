@@ -53,12 +53,12 @@ namespace Doit.Finance.MonetaryFinancialInstitutions
                .Select(row => 
                 new BankAccount 
                 { 
-                    Name = row.Field(3).Value.ToString(), 
-                    ShortName = row.Field(6).Value.ToString(),
-                    BankCode = row.Field(1).Value.ToString(),
-                    BIC = row.Field(8).Value.ToString(),
-                    Postal = row.Field(4).Value.ToString(),
-                    City = row.Field(5).Value.ToString(),
+                    Name = row.Field(2).Value.ToString(), 
+                    ShortName = row.Field(5).Value.ToString(),
+                    BankCode = row.Field(0).Value.ToString(),
+                    BIC = row.Field(7).Value.ToString(),
+                    Postal = row.Field(3).Value.ToString(),
+                    City = row.Field(4).Value.ToString(),
                     Country = "DE"
                 }
             ).ToList();
