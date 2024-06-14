@@ -1,5 +1,5 @@
 ﻿# Do.Finance.MonetaryFinancialInstitution
-[![NuGet version](https://badge.fury.io/nu/Doit.Finance.MonetaryFinancialInstitution.svg)](https://badge.fury.io/nu/Doit.Finance.MonetaryFinancialInstitution)
+[![NuGet version](https://badge.fury.io/nu/Doit.Finance.MonetaryFinancialInstitution.png)](https://badge.fury.io/nu/Doit.Finance.MonetaryFinancialInstitution)
 [![Nuget Deploy](https://github.com/d-oit/Doit.Finance.MonetaryFinancialInstitutions/actions/workflows/publish_nuget_package.yml/badge.svg)](https://github.com/d-oit/Doit.Finance.MonetaryFinancialInstitutions/actions/workflows/publish_nuget_package.yml)
 [![Build and Test - release branch](https://github.com/d-oit/Doit.Finance.MonetaryFinancialInstitutions/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/d-oit/Doit.Finance.MonetaryFinancialInstitutions/actions/workflows/build-and-test.yml)
 
