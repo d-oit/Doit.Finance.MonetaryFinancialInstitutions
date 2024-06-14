@@ -1,7 +1,7 @@
 ﻿# Do.Finance.MonetaryFinancialInstitution
 [![NuGet version](https://badge.fury.io/nu/Doit.Finance.MonetaryFinancialInstitution.svg)](https://badge.fury.io/nu/Doit.Finance.MonetaryFinancialInstitution)
 ![Nuget Deploy](https://github.com/do-it-ger/Doit.Finance.MonetaryFinancialInstitutions/workflows/Nuget%20Deploy/badge.svg?branch=release)
-![Build and Test - release branch](https://github.com/do-it-ger/Doit.Finance.MonetaryFinancialInstitutions/workflows/Build%20and%20Test%20-%20release%20branch/badge.svg?branch=release)
+[![Build and Test - release branch](https://github.com/d-oit/Doit.Finance.MonetaryFinancialInstitutions/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/d-oit/Doit.Finance.MonetaryFinancialInstitutions/actions/workflows/build-and-test.yml)
 
 - Get the latest Monetary Financial Institutions (MFIs) from https://www.ecb.europa.eu 
 - Additional support of national bank sort code
