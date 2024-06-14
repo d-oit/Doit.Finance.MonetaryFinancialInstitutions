@@ -15,7 +15,7 @@ namespace Do.Finance.MonetaryFinancialInstitutions.Tests
 
             // Act
             var result = monetaryFinancialInstitution.GetMfiUpdateList();
-            result.Count().ShouldBe(3);
+            result.Count().ShouldBe(7);
         }
 
         [Fact]
@@ -78,7 +78,7 @@ namespace Do.Finance.MonetaryFinancialInstitutions.Tests
             var defaultCsvUpdateFileName = monetaryFinancialInstitution.CsvMfiUpdateFileName;
             // Act
             var result = await monetaryFinancialInstitution.GetCurentListAsync(false).ConfigureAwait(true);
-            result.Count().ShouldBe(6197);
+            result.Count().ShouldBe(5577);
 
             monetaryFinancialInstitution.CsvMfiFileName.ShouldBe(defaultCsvFileName);
             monetaryFinancialInstitution.CsvMfiUpdateFileName.ShouldBe(defaultCsvUpdateFileName);
@@ -92,7 +92,7 @@ namespace Do.Finance.MonetaryFinancialInstitutions.Tests
 
             // Act
             var result = monetaryFinancialInstitution.GetMfiList();
-            result.Count().ShouldBe(6197);
+            result.Count().ShouldBe(5577);
         }
 
     }
