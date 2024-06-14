@@ -15,7 +15,7 @@ namespace Do.Finance.MonetaryFinancialInstitutions.Tests.CountryCentralBanks.Deu
             bool download = false;
             // Act
             var result = await germanySortCodeHelper.GetCurrentBankSortList(
-                download);
+                download).ConfigureAwait(true);
 
             result.Count.ShouldBeGreaterThan(1000);
         }
@@ -25,7 +25,7 @@ namespace Do.Finance.MonetaryFinancialInstitutions.Tests.CountryCentralBanks.Deu
         {
             // Arrange
             var germanySortCodeHelper = new GermanyBankSortCodeHelper();
-            var result = await germanySortCodeHelper.GetCurrentBankSortList(download: true);
+            var result = await germanySortCodeHelper.GetCurrentBankSortList(download: true).ConfigureAwait(true);
 
             result.ShouldNotBe(null);
         }
