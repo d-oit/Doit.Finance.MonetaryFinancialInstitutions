@@ -17,9 +17,4 @@
         public string RESERVE { get; set; }
         public string EXEMPT { get; set; }
     }
-
-    public class MfiMinimunReserveRequirementUpdate : MfiMinimunReserveRequirement
-    {
-        public string CHANGE { get; set; }
-    }
 }

@@ -28,7 +28,7 @@ namespace Do.Finance.MonetaryFinancialInstitutions.Tests
             var defaultCsvUpdateFileName = monetaryFinancialInstitution.CsvMfi_Mrr_UpdateFileName;
 
             // Act
-            var result = await monetaryFinancialInstitution.GetCurentMrrListAsync(true);
+            var result = await monetaryFinancialInstitution.GetCurentMrrListAsync(true).ConfigureAwait(true);
             result.Count().ShouldBeGreaterThan(1000);
 
             monetaryFinancialInstitution.CsvMfi_Mrr_FileName.ShouldNotBe(defaultCsvFileName);
@@ -44,7 +44,7 @@ namespace Do.Finance.MonetaryFinancialInstitutions.Tests
             var defaultCsvFileName = monetaryFinancialInstitution.CsvMfi_Mrr_FileName;
             var defaultCsvUpdateFileName = monetaryFinancialInstitution.CsvMfi_Mrr_UpdateFileName;
             // Act
-            var result = await monetaryFinancialInstitution.GetCurentMrrListAsync(false);
+            var result = await monetaryFinancialInstitution.GetCurentMrrListAsync(false).ConfigureAwait(true);
             result.Count().ShouldBe(4387);
 
             monetaryFinancialInstitution.CsvMfi_Mrr_FileName.ShouldBe(defaultCsvFileName);
@@ -61,7 +61,7 @@ namespace Do.Finance.MonetaryFinancialInstitutions.Tests
             var defaultCsvUpdateFileName = monetaryFinancialInstitution.CsvMfiUpdateFileName;
 
             // Act
-            var result = await monetaryFinancialInstitution.GetCurentListAsync(true);
+            var result = await monetaryFinancialInstitution.GetCurentListAsync(true).ConfigureAwait(true);
             result.Count().ShouldBeGreaterThan(1000);
 
             monetaryFinancialInstitution.CsvMfiFileName.ShouldNotBe(defaultCsvFileName);
@@ -77,7 +77,7 @@ namespace Do.Finance.MonetaryFinancialInstitutions.Tests
             var defaultCsvFileName = monetaryFinancialInstitution.CsvMfiFileName;
             var defaultCsvUpdateFileName = monetaryFinancialInstitution.CsvMfiUpdateFileName;
             // Act
-            var result = await monetaryFinancialInstitution.GetCurentListAsync(false);
+            var result = await monetaryFinancialInstitution.GetCurentListAsync(false).ConfigureAwait(true);
             result.Count().ShouldBe(6197);
 
             monetaryFinancialInstitution.CsvMfiFileName.ShouldBe(defaultCsvFileName);
